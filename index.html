@@ -1,30 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        *{
-            text-align: cener;
-            backgroud-color: blue;
-            color: write;
+    <title>Fase 2</title>
+    <style>
+        body{
+            text-align: center;
         }
-    </title>
+    </style>
 </head>
+
+
 <body>
-<h1> Bienvenidos a mi sitio Web </h1>
-<h2> Proyecto de sitio Web año 2023 periodo 16-01 </h2>
-<hr>
-<h3> Nombre: José De Jesús Bernal González </h3>
-<h3> Programa: Ingenieria de Sistemas  </h3>
-<h3> Fecha de Creación 18/02/2023 </h3>
-<hr>
-<p> Mis datos de contacto son: <br>
-	Skype: fenix_bernal <br>
-	Telefono: 3057538812 <br>
-	emai: jdbernalg@unadvirtual.edu.co <br>
-	fenix_bernal@hotmail.com <br>
-</p>
+    <header>
+        <h1>Acerca de Flex Box </h1>
+    </header>
+    <nav>
+        <ul>
+            <a name="inicio1"></a>
+            <li><a href="#inicio">INICIO</a></li>
+            <li><a href="#Flex">FLEX BOX</a></li>
+            <li><a href="#imagen">MOCKUP</a></li>
+            <li><a href="#acerca">ACERCA DE</a></li>
+
+        </ul>
+    </nav>
+    <br><br><br><br><br><br><br><br><br><br>
+    <a name="inicio">
+        <h2>INICIO</h2>
+    </a>
+    <p>
+    <h3>En este trabajo se pretende incurcionar en el tema de los Flexbox como modo de investigación</h3>
+    </p>
+    <br><br><br>
+    <img src="IMG/FLEXBOX3.jpg" alt="Ejemplo de Flexbox">
+    <br><br><br><br><br><br>
+    <a href="#inicio1">INICIO</a>
+    <br><br><br><br><br>
+
+    <section>
+        <a name="Flex">
+            <h2>Conceptos Básicos de flexbox</h2>
+        </a>
+        <p>
+        <h3>
+
+            <br>
+            El Módulo de Caja Flexible, comúnmente llamado flexbox, fue diseñado como un modelo unidimensional de
+            layout, y como un método que pueda ayudar a distribuir el espacio entre los ítems de una interfaz y mejorar
+            las capacidades de alineación. Este artículo hace un repaso de las principales características de flexbox,
+            las que exploraremos con mayor detalle en el resto de estas guías.
+
+            <br>
+
+            Cuando describimos a flexbox como unidimensional destacamos el hecho que flexbox maneja el layout en una
+            sola dimensión a la vez — ya sea como fila o como columna. Esto contrasta con el modelo bidimensional del
+            Grid Layout de CSS, el cual controla columnas y filas a la vez.
+
+            <br>
+
+            Los dos ejes de flexbox
+
+            Cuando trabajamos con flexbox necesitamos pensar en términos de dos ejes — el eje principal y el eje
+            cruzado.
+
+            <br>
+
+            El eje principal está definido por la propiedad flex-direction, y el eje cruzado es perpendicular a este.
+
+            <br>
+
+            Todo lo que hacemos con flexbox está referido a estos dos ejes, por lo que vale la pena entender cómo
+            trabajan desde el principio.
+
+            <br><br>
+
+            El eje principal
+            <br>
+            El eje principal está definido por flex-direction, que posee cuatro posibles valores:
+            <br>
+            row
+            <br>
+            row-reverse
+            <br>
+            column
+            <br>
+            column-reverse
+            <br><br>
+            Si elegimos row o row-reverse, el eje principal correrá a lo largo de la fila según la dirección de la línea
+            .
+            <br><br>
+            Al elegir column o column-reverse el eje principal correrá desde el borde superior de la página hasta el
+            final — según la dirección del bloque.
+            <br><br>
+            El eje cruzado
+            <br><br>
+            El eje cruzado va perpendicular al eje principal, y por lo tanto si flex-direction (del eje principal) es
+            row o row-reverse el eje cruzado irá por las columnas.
+            <br><br>
+            Si el eje principal es column o column-reverse entonces el eje cruzado corre a lo largo de las filas.
+            <br><br>
+            Líneas de inicio y de fin
+            <br><br>
+            Otra área vital de entendimiento es cómo flexbox no hace suposiciones sobre la manera de escribir del
+            documento. En el pasado, CSS estaba muy inclinado hacia el modo de escritura horizontal y de izquierda a
+            derecha. Los métodos modernos de layout acogen la totalidad de modos de escritura así que no es necesario
+            asumir que una línea de texto empezará arriba del documento y correrá de izquierda a derecha, con nuevas
+            líneas dispuestas una abajo de la otra.
+            <br><br>
+            Puede leer más acerca de la relación que hay entre flexbox y la especificación de los Modos de Escritura en
+            un artículo posterior, sin embargo la siguiente descripción debería ayudar para explicar porqué no se habla
+            de izquierda y derecha ni de arriba o abajo a la hora de describir la dirección en la que fluyen los ítems
+            flex.
+            <br><br>
+            Si flex-direction es row y estoy trabajando en español, entonces el margen inicial del eje principal quedará
+            a la izquierda, y el margen final a la derecha.
+            <br><br>
+
+            <h2>Propiedades de Flexbox</h2>
+
+            container {
+            display: flex; /* or inline-flex */
+            }
+            <br><br>
+
+            container {
+            flex-direction: row | row-reverse | column | column-reverse;
+            }
+
+            <br></br>
+
+            container {
+            flex-wrap: nowrap | wrap | wrap-reverse;
+            }
+
+            <br><br>
+
+            container {
+            flex-flow: column wrap;
+            }
+
+            <br><br>
+
+            container {
+            justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end
+            | left | right ... + safe | unsafe;
+            }
+
+            <br><br>
+
+            container {
+            align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start |
+            end | self-start | self-end + ... safe | unsafe;
+            }
+
+            <br><br>
+
+            container {
+            align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch |
+            start | end | baseline | first baseline | last baseline + ... safe | unsafe;
+            }
+
+            <br><br>
+
+
+        </h3>
+        </p>
+        <a href="#inicio1">INICIO</a>
+    </section>
+    <br><br><br><br><br>
+    <section>
+        <a name="imagen">
+            <h2>MOCKUP</h2>
+        </a>
+
+        <img src="IMG/mockup.png" alt="Diseño del mockup">
+        <br></br>
+        <a href="#inicio1">INICIO</a>
+
+    </section>
+    <BR></BR><BR></BR><BR></BR>
+    <section>
+        <p>
+            <a name="acerca">
+                <H2>ACARCA DEL TRABAJO</H2>
+            </a>
+
+            Esta investigación fue tomada de la paguna web <br>
+            https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox 
+            <BR></BR><BR></BR><BR></BR>
+
+        </p>
+    </section>
+    <a href="#inicio1">INICIO</a>
+    <footer>Esta pagina fue desarrollada por José Bernal 26/03/2023</footer>
 </body>
+
 </html>
